@@ -1,0 +1,9 @@
+@import './carousel.css';
+@import './footer.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+

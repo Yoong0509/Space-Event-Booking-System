@@ -1,0 +1,115 @@
+/* Banner (About.php) */
+/* Main Banner Background Image */
+.main-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0f0f0;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.6);
+  position: relative;
+  border-radius: 0; 
+  animation: fadeInDown 1s;
+}
+.main-banner p {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  animation: fadeInDown 1s;
+}
+.main-banner::before {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: linear-gradient(120deg, rgba(197, 59, 228, 0.6), rgba(222, 172, 208, 0.6));
+  z-index: -1;
+}
+
+/* Section */
+.section {
+  background: #fff;
+  padding: 60px 8vw;
+  margin-top: 60px;
+  border: none;     
+  box-shadow: none; 
+}
+.section-title {
+  color: #111;
+  font-size: 2.4rem;
+  font-family: 'Playfair Display', serif; 
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* About Container */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.about-container.reverse {
+  flex-direction: row-reverse;
+}
+
+
+.about-image, .text {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0; 
+  box-shadow: none; 
+  object-fit: cover;
+}
+
+
+.text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--secondary);
+  text-align: left; 
+  margin: 0;
+}
+.text h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* main.php container */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
